@@ -1,0 +1,13 @@
+{
+  "name": "prime_generator",
+  "version": "1.0.0",
+  "description": "Prime Generator on Docker",
+  "author": "la.mastorakis@gmail.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
