@@ -95,14 +95,14 @@ After the creation of containers (as many as we want from any image) we observe 
     Name of Container (generator from Docker)
     The image from wich is built
     An the IP which value is still NULL
-    Status "Exited"
+    Status "Created"
     Minutes from its last status
 
 The names of these containers are also accessible for checking typing
 
     docker ps -a
 
-The Containers have been created but are not running, the status `Exited` indicate that are still stopped.
+The Containers have been created but are not running, the status `Created` indicate that are initialized but they are not running.
 So in order to start them we press Start
 
     Start
@@ -125,6 +125,6 @@ Also the tool can
 
     Stop, Kill, Restart 
     
-any of the already existing containers
+any of the already existing containers and monitor the change of their values
 
 
