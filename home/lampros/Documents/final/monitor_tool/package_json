@@ -1,0 +1,9 @@
+{
+  "name": "monitor_tool",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.14.0",
+    "fs": "0.0.2",
+    "http": "0.0.0"
+  }
+}
