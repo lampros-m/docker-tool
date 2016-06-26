@@ -8,12 +8,18 @@ const PORT = 8080;
 // App
 const app = express();
 app.get('/', function (req, res) {
-  //res.send('Hello world\n');
-  var memory_toreserve = 30;
+  var memory_toreserve = 50;
   var out = reserveMemory(memory_toreserve);
-
-  setTimeout(function(){ 
-  res.send('Reserved: '+memory_toreserve+' MB');
+  setTimeout(function(){
+  	out = null;
+	
+	if (global.gc) {
+    		global.gc();
+	}else {
+    		console.log('Garbage collection unavailable.  Pass --expose-gc '
+      			+ 'when launching node to enable forced garbage collection.');
+	}
+  	res.send('Memory has been reserved');  
   },5000
   );
 
@@ -29,7 +35,5 @@ function reserveMemory(amount){
 	for (var i=0; i<amount*100000; i++){
 		mem_cont.push("1234567890");
 	}
-
 	return mem_cont;
-	
 }
