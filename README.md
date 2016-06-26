@@ -117,7 +117,9 @@ So for the specific container, the port from wich is accessible is the 3503
 
     example: localhost:3503
     
-If we make some calls to these containers by theri public port, we can receive the results of the web apps they host as also as to monitor the values of CPU and memory they allocate through the monitor.
+If we make some calls to these containers by their public port, we can recieve the results of the web apps they host as also as to monitor the values of CPU and memory they allocate while processing.
+
+      example: make a call to a "CPU load conainer" and then monitor the CPU metrics
     
 Also the tool can
 
