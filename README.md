@@ -36,7 +36,6 @@ Make sure you have all the necessary files after having deploying the project to
     home/lampros/Documents/prime_node/Dockerfile
     home/lampros/Documents/prime_node/package.json
     home/lampros/Documents/prime_node/server.js
-    home/logs/log.txt
 
 The next step is to build the above 3 images
 
