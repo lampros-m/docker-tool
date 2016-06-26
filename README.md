@@ -120,11 +120,10 @@ So for the specific container, the port from wich is accessible is the 3503
     
 If we make some calls to these containers by theri public port, we can receive the results of the web apps they host as also as to monitor the values of CPU and memory they allocate through the monitor.
     
+Also the tool can
 
-
-
-
+    Stop, Kill, Restart 
     
-    
+any of the already existing containers
 
 
