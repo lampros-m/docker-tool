@@ -1,0 +1,70 @@
+#menu_table >tbody>tr>td {
+	padding:10px;
+}
+
+#img_select {
+	width:200px;
+}
+
+#banner {
+	height:200px;
+	background-color: #0066ff
+}
+
+#table_div{
+}
+
+.cont_ctrl{
+	width:100px;
+}
+
+#mid_cont{
+	padding:100px 100px 100px 100px;
+}
+
+.btn_hold {
+	width:100px;
+}
+
+#main_table > tbody > tr > td {
+     vertical-align: middle;
+}
+
+.lbl_hold{
+width:300px
+}
+
+#state_lb{
+	font-size:16px;
+	font-weight:bold;
+}
+
+#status_lb{
+	font-size:12px;
+	max-width:100px;
+}
+
+.legend{
+	font-size: 10px;
+}
+
+#floating_alert {
+	position: absolute;
+    bottom: 20px;
+	width:100%;
+    z-index: 5000;
+}
+
+#ip_lb {
+	font-weight:bold;
+	color:gray;
+}
+
+#image_lb {
+	font-weight:bold;
+	color:#0066ff;
+}
+
+#name_lb {
+	font-style:italic;
+}

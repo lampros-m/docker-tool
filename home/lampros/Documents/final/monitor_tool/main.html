@@ -1,0 +1,107 @@
+﻿<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="chart.js"></script>
+		<script src="control.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	</head>
+<body>
+	<div id="banner"></div>
+		<div id="top_cont">
+			<center>
+			<table id="menu_table">
+				<tr>
+					<td>
+						<button type="button" class="btn btn-primary" id="create_btn">Create Container</button>
+					</td>
+					<td>
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" id="img_select">Hello World<span class="caret"></span></button>
+						  <ul class="dropdown-menu">
+						    <li><a href="javascript:void(0)">Hello World</a></li>
+						    <li><a href="javascript:void(0)">Cpu Load</a></li>
+						    <li><a href="javascript:void(0)">Memory Load</a></li>
+						  </ul>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</center>
+		</div>
+	<div id="mid_cont">
+		<div id="mid_up"></div>
+		<div id="table_div">
+			<table class="table" id="main_table">
+				
+			</table>
+		</div>
+	</div>
+	<script>
+		 $(function(){
+			      $(".dropdown-menu").on('click', 'li a', function(){
+			      $("#img_select").text($(this).text());
+			      $("#img_select").val($(this).text());
+			   });
+		   });
+		   
+		   
+		   function loadFunctionalities(){
+			   	$("#create_btn").click(function(){
+			   			createContainer(image_map[$("#img_select").text()]);
+			   });
+			   
+			   
+			   setInterval(function() {
+				  update_request();
+				  
+				  for (var c in loaded_containers){
+				  		if (state_map[loaded_containers[c]]==='running'){
+				  			updateStats(loaded_containers[c]);
+				  		} else {
+				  			resetCharts(loaded_containers[c]);
+				  		}
+				  }				  
+				}, 2000);
+		   }
+		   
+		   
+		function update(id){		  
+		   $('#'+id).find(".start_btn").click(function(){
+		   		console.log("starting "+id);
+		   		startContainer(id);
+		   });
+		   
+		   $('#'+id).find(".delete_btn").click(function(){
+		   		console.log("deleting "+id);
+		   		deleteContainer(id);
+		   });
+		   
+		   $('#'+id).find(".stop_btn").click(function(){
+		   		console.log("stopping "+id);
+		   		stopContainer(id);
+		   });
+		}
+		
+		bootstrap_alert = function () {}
+		bootstrap_alert.warning = function (message, alert, timeout) {
+			    $('<div id="floating_alert" class="alert alert-' + alert + ' fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' + message + '&nbsp;&nbsp;</div>').appendTo('body');
+			    setTimeout(function () {
+			        $(".alert").alert('close');
+			    }, timeout);
+
+			}
+		  
+		
+		Chart.defaults.global.legend.display = false;
+  		Chart.defaults.global.tooltips.enabled = false;
+		
+		$( document ).ready(function() {
+		    update_request();
+		    loadFunctionalities();
+		});
+  		
+	</script>	
+</body>
+</html>
