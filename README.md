@@ -1,3 +1,4 @@
 # wrkbl-docker
-Workable Docker Assignment
-sadasd
+Workable Docker Assignment - Monitoring of a set of web services containers
+
+#Installing
