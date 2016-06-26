@@ -125,19 +125,19 @@ function resetCharts(id){
 }
 
 function updateCharts(id,value,value2){
-	if (graph_map[id].data.labels.length<=max_graph){
+	if (graph_map[id].data.labels.length<max_graph){
 		graph_map[id].data.labels.push("");
 	}
 	graph_map[id].data.datasets[0].data.push(value);
-	if (graph_map[id].data.labels.length>max_graph){
+	if (graph_map[id].data.labels.length===max_graph){
 		graph_map[id].data.datasets[0].data.splice(0,1);		
 	}
 		
-	if (graph2_map[id].data.labels.length<=max_graph){
+	if (graph2_map[id].data.labels.length<max_graph){
 		graph2_map[id].data.labels.push("");
 	}
 	graph2_map[id].data.datasets[0].data.push(value2);
-	if (graph2_map[id].data.labels.length>max_graph){
+	if (graph2_map[id].data.labels.length===max_graph){
 		graph2_map[id].data.datasets[0].data.splice(0,1);		
 	}
 	graph_map[id].update();
@@ -294,4 +294,3 @@ function createGraph1(id){
 			    }
 			});				
 		}
-		
