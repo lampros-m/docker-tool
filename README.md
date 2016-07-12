@@ -5,7 +5,7 @@ Docker Management Tool - Deployment and monitoring of a set of web services cont
 This project has as a goal to to build a tool for managing the deployment and monitoring of a set of web services containers.   
 For this Docker containers are used as also as Docker's Remote API.
 
-The goal of the Project is to Build 3 different images containing each a unique web application
+The goal of the Project is to Build 3 different images containing each a unique web application  
  1. "Hellow World" (image - app) - A basic "Hello World" app    
  2. "Prime Numbers Generator" - An algorith for generating prime numbers (CPU usage)  
  3. "Memory Stretching" - An algorith for allocationg blocks of memeroy (RAM usage)  
