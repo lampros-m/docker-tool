@@ -2,19 +2,17 @@
 Docker Management Tool - Deployment and monitoring of a set of web services containers.
 
 # Overview
-This project has as a goal to to build a tool for managing the deployment and monitoring of a set of web services containers. For this Docker containers are used as also as Docker's Remote API.
+This project has as a goal to to build a tool for managing the deployment and monitoring of a set of web services containers.   
+For this Docker containers are used as also as Docker's Remote API.
 
 The goal of the Project is to Build 3 different images containing each a unique web application
-1. "Hellow World" image - app  
-2. "Prime Numbers Generator" image - app  
-3. "Memory Stretching" image - app  
+ 1. "Hellow World" (image - app) - A basic "Hello World" app    
+ 2. "Prime Numbers Generator" - An algorith for generating prime numbers (CPU usage)  
+ 3. "Memory Stretching" - An algorith for allocationg blocks of memeroy (RAM usage)  
 
-The 2nd application uses an algorith for generating prime numbers (cpu usages)
-The 3rd applicaton uses an algorith for allocationg blocks of memeroy (ram usage)
-
-2. Run the "Monitor Tool" with these funcitonalities
-  a. Create - Stop - Kill a running instance (container)
-  b. Monitor port rooting, parent image, CPU & Memory usage
+As also as to execute the "Monitor Tool" with the below funcitonalities:  
+  1. Create - Stop - Kill a running instance (container)  
+  2. Monitor port rooting, parent image, CPU & Memory usage
 
 #Installing
 Make sure you have all the necessary files after having deploying the project to `root "/" folder`
