@@ -1,4 +1,4 @@
-# wrkbl-docker
+# Docker management tool
 Workable Docker Assignment - Monitoring of a set of web services containers
 
 # Overview
