@@ -1,12 +1,12 @@
 # Docker Management Tool
-Docker Management Tool - Monitoring of a set of web services containers
+Docker Management Tool - Deployment and monitoring of a set of web services containers.
 
 # Overview
-This project uses the Docker tool for creating and running Docker Containers.
-The 2 goals of the deployment is:
+This project has as a goal to to build a tool for managing the deployment and monitoring of a set of web services containers. For this uses Docker containers, and it’s Remote API.
 
-1. Build 3 different images containing each one web application
+The goal of the Project is to Build 3 different images containing each a unique web application
   a. "Hellow World" image - app
+  
   b. "Prime Numbers Generator" image - app
   c. "Memory Stretching" image - app
 
