@@ -1,5 +1,5 @@
-# Docker management tool
-Workable Docker Assignment - Monitoring of a set of web services containers
+# Docker Management Tool
+Docker Management Tool - Monitoring of a set of web services containers
 
 # Overview
 This project uses the Docker tool for creating and running Docker Containers.
